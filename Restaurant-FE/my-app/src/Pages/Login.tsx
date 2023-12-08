@@ -2,10 +2,11 @@ import loginimg from "../Assets/traditional-nasi-lemak-meal-composition.jpg"
 import InputField from "../Components/InputField"
 import { useState } from "react"
 import axios from 'axios'
+import {post} from '../Components/Routes'
 
 
 const Login = () => {
-    const client = new FastAPIClient(config);
+    // const client = new FastAPIClient(config);
 
     const [isRegister, setIsRegister] = useState(false);
     const [username, setUserName] = useState('');
@@ -18,7 +19,7 @@ const Login = () => {
     const handleRegister = async () => {
         try{
             setIsLoading(true);
-            const response = await axios.post("https://resto-hemat-api.ambitiousmoss-bd081c95.australiaeast.azurecontainerapps.io/register", 
+            const response = await post("register", 
               {
                 username : username,
                 email: email,
@@ -56,13 +57,11 @@ const Login = () => {
             formData.append('username', username);
             formData.append('password', password);
             console.log(formData)
-            const response = await axios.post("https://resto-hemat-api.ambitiousmoss-bd081c95.australiaeast.azurecontainerapps.io/token", {formData},
+            const response = await post("token", 
                 {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    }
-                }  
+                    username,
+                    password
+                },
             );
               if (response.status === 201) {
                 

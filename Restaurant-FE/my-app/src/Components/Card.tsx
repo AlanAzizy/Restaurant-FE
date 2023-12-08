@@ -25,9 +25,9 @@ const Card:React.FC<{image : string}> = ({image}) => {
         <div className="w-72 h-96 bg-sky-100 rounded-xl p-2">
             <img src={gambar} className="h-44 p-1 pt-2 rounded-lg mx-auto "/>
             <div className='text-left ml-4 mb-1'>
-                <h2 className='text-xl'>Nama Makanan</h2>
-                <p className='text-md'>Deskripsi makanan ini harusnya enak kamu harus beli</p>
-                <h3 className='text-lg'>RpXXXX,-</h3>
+                <h2 className='text-xl'>Nasi Goreng</h2>
+                <p className='text-md'>Makanan enak yang harus anda beli</p>
+                <h3 className='text-lg'>Rp12.000,-</h3>
             </div>
             <button className='bg-green-200 w-5/6 p-2 m-1 rounded-xl'>Tambah ke keranjang</button>
         </div>

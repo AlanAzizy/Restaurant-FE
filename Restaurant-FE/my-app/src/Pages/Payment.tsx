@@ -13,26 +13,22 @@ const Payment = () => {
                 <div className='flex flex-wrap justify-evenly gap-5 p-2 m-2 min-h-[400px]'>
                     <Card2 image={""}/>
                     <Card2 image={""}/>
-                    <Card2 image={""}/>
-                    <Card2 image={""}/>
-                    <Card2 image={""}/>
-                    <Card2 image={""}/>
                 </div>
                 <div className='w-full p-1 pt-3'>
                     <div className='flex w-1/3 justify-evenly'>
-                        <button className='bg-green-400 rounded-lg p-1 w-5/12'>Pesan di tempat</button>
-                        <button className='border-[#00FF00] border-2 p-1 w-5/12 rounded-lg'>Pesan Antar</button>
+                        <button className='border-[#00FF00] border-2 rounded-lg p-1 w-5/12'>Pesan di tempat</button>
+                        <button className='bg-green-400 border-2 p-1 w-5/12 rounded-lg'>Pesan Antar</button>
                     </div>
                     <div className='ml-3 pl-2 m-1 p-1'>
                         <table className="w-1/2 text-left">
                             <tbody>
                                 <tr>
                                     <td>Total pesanan</td>
-                                    <td>RpXXX,-</td>
+                                    <td>Rp24.000,-,-</td>
                                 </tr>
                                 <tr>
                                     <td>Ongkir</td>
-                                    <td>RpXXX,-</td>
+                                    <td>Rp12.000,-</td>
                                 </tr>
                                 <tr>
                                     <td>Paket Hemat</td>
@@ -40,7 +36,7 @@ const Payment = () => {
                                 </tr>
                                 <tr>
                                     <td>Total Pembayaran</td>
-                                    <td>RpXXX,-</td>
+                                    <td>Rp36.000,-</td>
                                 </tr>
                             </tbody>
                         </table>

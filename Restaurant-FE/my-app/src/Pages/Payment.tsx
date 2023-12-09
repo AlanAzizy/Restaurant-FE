@@ -2,8 +2,14 @@
 import Card from '../Components/Card'
 import Card2 from '../Components/Card2';
 import SideBar from '../Components/Sidebar';
+import { CartContext } from '../Components/CartContext';
+import { useContext } from 'react';
+import CartItem from '../Components/CartItem';
 
 const Payment = () => {
+
+    const cartContext = useContext(CartContext)
+    console.log(cartContext?.cart)
 
     return <>
     <div>
@@ -11,8 +17,9 @@ const Payment = () => {
         <div className='pl-[370px] p-20 w-screen h-screen'>
             <div className='shadow-xl p-2 relative divide-y-4 px-0 min-h-[90%]'>
                 <div className='flex flex-wrap justify-evenly gap-5 p-2 m-2 min-h-[400px]'>
-                    <Card2 image={""}/>
-                    <Card2 image={""}/>
+                    {cartContext?.cart.map((menu : CartItem, idx : number) => {
+                        return <Card2 menu={menu.menu} qty={menu.qty}/>
+                    })}
                 </div>
                 <div className='w-full p-1 pt-3'>
                     <div className='flex w-1/3 justify-evenly'>
